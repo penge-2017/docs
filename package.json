@@ -1,0 +1,21 @@
+{
+  "name": "notes-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "markdown-it-katex": "^2.0.3",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.17"
+  }
+}
