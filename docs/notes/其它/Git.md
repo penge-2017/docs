@@ -274,6 +274,9 @@ git remote add origin https://github.com/YourUsername/my-first-git-project.git
 
 使用 `git push` 命令，把本地的提交推送到远程仓库。
 
+> [!WARNING]
+>注意：push 需要登录对应的 git 远程仓库，如果是 GitHub 登录的账号是用户名，密码是 APT(personal access tokens)，如果是 gitee 则是登录密码，不同的平台规则不一样
+
 ```sh
 # -u 参数会在推送的同时，将本地的 master 分支和远程的 master 分支关联起来，以后推送就可以简化为 git push
 git push -u origin master
