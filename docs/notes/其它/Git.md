@@ -536,6 +536,7 @@ a1b2c3d oops, committed a bad file
 | `git log`                     | 查看提交历史        |
 | `git clone <url>`             | 克隆一个远程仓库到本地   |
 | `git remote add origin <url>` | 关联一个远程仓库      |
+| `git remote -v`               | 查看添加的所有远程仓库   |
 | `git push`                    | 推送本地提交到远程     |
 | `git pull`                    | 从远程拉取最新代码     |
 | `git branch`                  | 查看/创建分支       |
