@@ -1,8 +1,8 @@
-# Git 入门：给小白的版本控制指南
 
 今天，我想和大家分享一个我自学路上觉得最牛、也最重要的工具之一 —— **Git**。
 
-> [!NOTE] 别被“版本控制”、“分布式”这些高大上的词吓到。我会用最简单的方式，带你一步步上手。这篇笔记就是为你这样的初学者准备的！
+> [!NOTE]
+>  别被“版本控制”、“分布式”这些高大上的词吓到。我会用最简单的方式，带你一步步上手。这篇笔记就是为你这样的初学者准备的！
 
 ## 1. Git 是什么？为什么要学它？
 
@@ -22,7 +22,8 @@
 - **想回到过去的某个版本？** 没问题，Git 可以让你随时读取任何一个“存档”。
 - **想开个小号，尝试一些新功能，又怕搞砸主线任务？** Git 的 **branch (分支)** 功能可以让你轻松创建“平行宇宙”，在里面随便折腾，成功了再合并回主线。
 
-> [!IMPORTANT] 无论是个人项目还是团队协作，Git 都是现代软件开发的基石。掌握它，你的开发效率和项目管理能力会得到质的飞跃。它是程序员的必备技能！
+> [!IMPORTANT]
+>  无论是个人项目还是团队协作，Git 都是现代软件开发的基石。掌握它，你的开发效率和项目管理能力会得到质的飞跃。它是程序员的必备技能！
 
 ## 2. 安装与初次配置
 
@@ -50,7 +51,8 @@ git version 2.39.2.windows.1
 
 打开终端，输入下面两条命令，把名字和邮箱换成你自己的。
 
-> [!TIP] 这里的邮箱建议使用你注册 GitHub 或 Gitee 的邮箱，方便以后关联。
+> [!TIP] 
+> 这里的邮箱建议使用你注册 GitHub 或 Gitee 的邮箱，方便以后关联。
 
 ```sh
 # 设置你的用户名
@@ -144,7 +146,8 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-> [!NOTE] Git 告诉你：有一个“未跟踪的文件” `readme.md`。意思是 Git 发现了这个新文件，但你还没让它“进购物车”（暂存区）。
+> [!NOTE] 
+> Git 告诉你：有一个“未跟踪的文件” `readme.md`。意思是 Git 发现了这个新文件，但你还没让它“进购物车”（暂存区）。
 
 **第二步：添加到暂存区（购物车）**
 
@@ -154,7 +157,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 git add readme.md
 ```
 
-> [!TIP] 如果有很多文件要添加，可以直接用 `git add .` 来添加当前目录下所有的修改。
+> [!TIP] 
+> 如果有很多文件要添加，可以直接用 `git add .` 来添加当前目录下所有的修改。
 
 现在再用 `git status` 看一下状态。
 
@@ -194,7 +198,8 @@ git commit -m "feat: Add project readme file"
  create mode 100644 readme.md
 ```
 
-> [!NOTE] 这里的 `a1b2c3d` 是本次提交的唯一ID（哈希值），是本地仓库提交的身份证号，不过被缩短了。
+> [!NOTE] 
+> 这里的 `a1b2c3d` 是本次提交的唯一ID（哈希值），是本地仓库提交的身份证号，不过被缩短了。
 
 太棒了！你已经完成了第一个版本的存档。现在再用 `git status` 看看。
 
@@ -231,7 +236,8 @@ Date:   Sun Apr 2 15:30:00 2023 +0800
 
 这里显示了提交的 ID、作者、时间和我们写的说明。
 
-> [!TIP] 我更推荐用一个更漂亮的格式来查看日志： `git log --oneline --graph --all` 它会用更简洁的一行来显示，并且能展示分支的图形化结构，非常清晰！
+> [!TIP] 
+> 我更推荐用一个更漂亮的格式来查看日志： `git log --oneline --graph --all` 它会用更简洁的一行来显示，并且能展示分支的图形化结构，非常清晰！
 
 ## 5. 远程仓库：与世界同步
 
@@ -268,7 +274,8 @@ git clone https://github.com/vuejs/vue.git
 git remote add origin https://github.com/YourUsername/my-first-git-project.git
 ```
 
-> [!NOTE] `origin` 是一个默认的、习惯性的叫法，你也可以叫它 `github` 或者别的名字，但 `origin` 是最常见的。
+> [!NOTE] 
+> `origin` 是一个默认的、习惯性的叫法，你也可以叫它 `github` 或者别的名字，但 `origin` 是最常见的。
 
 **第二步：推送你的本地提交**
 
@@ -343,7 +350,8 @@ git merge feature-login
 git branch -d feature-login
 ```
 
-> [!WARNING] 合并时可能会出现**冲突 (Conflict)**。比如你在两个分支上都修改了同一个文件的同一行。别担心，这是正常现象。Git 会在文件里标记出冲突的地方，你需要手动解决冲突，然后再提交一次。解决冲突是进阶技能，我们以后再详细说。
+> [!WARNING] 
+> 合并时可能会出现**冲突 (Conflict)**。比如你在两个分支上都修改了同一个文件的同一行。别担心，这是正常现象。Git 会在文件里标记出冲突的地方，你需要手动解决冲突，然后再提交一次。解决冲突是进阶技能，我们以后再详细说。
 
 ## 7. 本地文件的“后悔药”
 
@@ -451,7 +459,8 @@ Changes not staged for commit:
 
 这是最“严重”的一种情况。你好比已经结完账，拿到了收据（commit）。现在想反悔，就得走“售后”流程了。这时我们有两种选择：`git reset`（暴力修改历史）和 `git revert`（安全地追加一次“反操作”）。
 
-> [!IMPORTANT] 这里的操作只适用于**还未推送到远程仓库**的提交。如果提交已经被 `push` 了，为了不影响团队其他人，请优先使用 `git revert`！
+> [!IMPORTANT] 
+> 这里的操作只适用于**还未推送到远程仓库**的提交。如果提交已经被 `push` 了，为了不影响团队其他人，请优先使用 `git revert`！
 
 我们先创建一个“错误”的提交。
 
@@ -472,7 +481,8 @@ git commit -m "oops, committed a bad file"
 - `--mixed` (默认)：中等。移动 HEAD 指针，并把修改内容放回到**工作区**。
 - `--hard`：最暴力。移动 HEAD 指针，并**彻底丢弃**所有相关的修改。
 
-> [!CAUTION] `git reset --hard` 是一个危险的操作，它会永久删除你的工作区改动，连 `Ctrl+Z` 都救不回来。使用前请三思！
+> [!CAUTION]
+>  `git reset --hard` 是一个危险的操作，它会永久删除你的工作区改动，连 `Ctrl+Z` 都救不回来。使用前请三思！
 
 **后悔药：`git reset`**
 
@@ -549,4 +559,144 @@ a1b2c3d oops, committed a bad file
 | `git restore --staged <file>` | 暂存区后悔         |
 | `git revert HEAD`             | 本地仓库“反向”提交来撤销 |
 
-> [!TIP] 学习 Git 最好的方法就是**多用**！为你自己的每一个小项目都创建一个 Git 仓库，哪怕只是一个学习笔记。熟能生巧！
+> [!TIP] 
+> 学习 Git 最好的方法就是**多用**！为你自己的每一个小项目都创建一个 Git 仓库，哪怕只是一个学习笔记。熟能生巧！
+
+## 常见问题
+
+### .gitignore文件
+
+想象一下你的项目文件夹，除了你自己写的核心代码（如 `.js`, `.py`, `.java` 文件），通常还会自动生成很多其他文件：
+
+*   **依赖包**：像 `node_modules` 这样的文件夹，体积巨大，里面有成千上万个文件，但它们都可以通过包管理工具（如 `npm install`）重新下载，完全没必要上传。
+*   **编译产物**：比如 VitePress 项目构建后生成的 `dist` 文件夹（或者根据你的配置，如 `outDir` 指定的目录），这些是最终的静态网站文件，应该由服务器自动构建，而不是手动提交。
+*   **IDE 配置文件**：如 JetBrains 系列的 `.idea` 文件夹，或 VS Code 的 `.vscode` 文件夹，这些是你个人的编辑器配置，团队其他人并不需要。
+*   **敏感信息**：包含数据库密码、API 密钥的 `.env` 文件。
+ >[!WARNING]
+ **绝对、绝对、绝对不要**将包含密码、密钥等敏感信息的文件提交到公共仓库！这会导致严重的安全漏洞。
+*   **系统或缓存文件**：macOS 的 `.DS_Store`，Windows 的 `Thumbs.db`，以及 VitePress 的缓存目录 `.vitepress/cache` 等。
+
+将这些文件提交到仓库，不仅会极大地增加仓库体积，拖慢 `clone` 和 `pull` 的速度，还可能泄露你的个人配置和敏感信息。
+
+**💡 解决：使用 `.gitignore` 文件**
+
+`.gitignore` 是一个纯文本文件，你可以在里面列出你希望 Git **忽略**的文件或文件夹的匹配规则。Git 在执行 `git add` 等命令时，会自动跳过这些文件。自然 gitignore 写的好看帮你省掉很多安全泄露问题，同时你不想让 git 帮你管理的文件也可以写进去。
+
+**如何使用？**
+
+1.  在你的项目**根目录**下，创建一个名为 `.gitignore` 的文件。
+
+    ```sh
+    # 在项目根目录下执行
+    touch .gitignore
+    ```
+
+2.  编辑这个文件，写入你要忽略的规则。
+
+**`.gitignore` 语法规则：**
+
+*   `#` 开头的行是注释。
+*   `/` 结尾的表示忽略整个目录，如 `node_modules/`。
+*   可以使用通配符，`*` 匹配任意多个字符，`?` 匹配一个字符。
+*   `!` 开头表示不忽略（即使前面有规则忽略了它）。
+
+**一个典型的 `.gitignore` 示例：**
+
+```gitignore
+# 这是一个注释行
+
+# 忽略操作系统自动生成的文件
+.DS_Store
+Thumbs.db
+
+# 忽略日志文件
+*.log
+debug.log
+
+# 忽略 IDE 和编辑器配置文件
+.idea/
+.vscode/
+
+# 忽略依赖和构建产物
+# 就像检索内容中提到的 cacheDir 和 outDir
+node_modules/
+dist/
+.vitepress/cache/
+
+# 忽略包含敏感信息的环境变量文件
+.env
+.env.local
+````
+
+> [!TIP] 
+> 你不必从零开始手写 `.gitignore` 文件。可以访问 [toptalgitignore](https://www.toptal.com/developers/gitignore/) 这个网站，输入你的项目技术栈（如 "Node", "Vitejs", "Windows", "macOS"），它会自动为你生成一份非常完善的 `.gitignore` 文件。
+
+**如果文件已经被提交了怎么办？**
+
+如果你不小心把一个本应忽略的文件（比如 `.env`）提交了，然后你再添加`.gitignore 文件`，只在 `.gitignore` 里加上它是不够的，因为 Git 已经开始**跟踪**这个文件了。你需要两步操作：
+
+1. 从 Git 仓库中删除它（但保留本地文件）。
+2. 提交这次更改。
+```sh
+# 1. 从 Git 的暂存区和版本历史中删除该文件
+git rm --cached .env
+
+# 2. 现在将 .env 添加到 .gitignore 文件中
+echo ".env" >> .gitignore
+
+# 3. 提交你的 .gitignore 文件和这次删除操作
+git commit -m "feat: Stop tracking .env file"
+```
+### GitHub更安全的远程仓库“钥匙”
+
+**🤔 问题：为什么 `git push` 时输入密码会失败？**
+
+很多初学者在第一次向 GitHub 推送时都会遇到这个错误：
+
+```text
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
+fatal: Authentication failed for 'https://github.com/YourUsername/your-repo.git/'
+```
+
+> [!IMPORTANT] 
+> 正如提示所说，从 2021 年 8 月 13 日起，GitHub 不再支持使用你的**账户密码**直接在命令行中进行 Git 操作的身份验证。这是为了提高安全性。
+
+**💡 解决：使用个人访问令牌 (Personal Access Token - PAT)**
+
+PAT 是一串长长的、随机生成的字符串，你可以把它当作一个**特定用途的、有期限的、可撤销的密码**。它比你的主密码安全得多，因为：
+
+- **权限可控**：你可以精确地设置这个 PAT 能做什么（比如只能读写仓库），不能做什么（比如不能删除仓库、不能管理组织）。
+- **可设置有效期**：你可以让它 7 天后、30 天后或自定义时间后自动过期。
+- **可随时撤销**：如果怀疑 PAT 泄露，可以随时在 GitHub 上将它作废，而不会影响你的主账户密码。
+
+**如何生成和使用 PAT？**
+
+1. **登录 GitHub**，点击右上角你的头像，选择 `Settings`。
+![](assets/Pasted%20image%2020250703183520.png)
+2. 在左侧菜单栏，滚动到底部，选择 `Developer settings`。
+![](assets/Pasted%20image%2020250703183549.png)
+3. 在左侧菜单栏，选择 `Personal access tokens` -> `Tokens (classic)`。
+![](assets/Pasted%20image%2020250703183630.png)
+4. 点击 `Generate new token` 按钮，选择 `Generate new token (classic)`。
+![](assets/Pasted%20image%2020250703183720.png)
+5. **填写信息**：
+    - **Note**：给这个令牌起个名字，方便你识别它的用途，比如 `My MacBook Git CLI`。
+    - **Expiration**：设置一个过期时间，推荐 30 天或 90 天。
+    - **Select scopes**：选择权限。对于日常的代码推送和拉取，勾选 `repo` 这个大项就足够了。它包含了对公共和私有仓库的完全控制权。
+    ![](assets/Pasted%20image%2020250703183856.png)
+6. 点击页面底部的 `Generate token` 按钮。
+![](assets/Pasted%20image%2020250703183920.png)
+> [!CAUTION]
+>  **请立即复制你的新令牌！** 这是你**唯一一次**能看到完整令牌的机会。关闭页面后，你将无法再次看到它。最好将它保存在一个安全的地方（比如你的密码管理器里）。
+
+**如何使用 PAT？**
+
+现在，当你执行 `git push`, `git pull` 或 `git clone` HTTPS 链接的私有仓库时，会弹出一个窗口或在命令行提示你输入用户名和密码：
+
+- **Username**: 输入你的 GitHub 用户名。
+- **Password**: **不要输入你的 GitHub 密码！** 在这里**粘贴你刚刚生成的 PAT**。
+
+通常，你的操作系统（如 Windows 的凭据管理器或 macOS 的钥匙串）会自动帮你记住这个 PAT。下次再操作时就不用重复输入了，直到它过期。
+
+如果输错了或者 PAT 过期了，你需要去系统的凭据管理工具里找到对应的记录并删除或更新它，然后再次 `push` 就会重新提示你输入了。

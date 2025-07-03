@@ -1,9 +1,17 @@
 import katex from 'markdown-it-katex'
 import { sidebar } from './utils/sidebar.js';
-export default {
+import { defineConfig } from 'vitepress'
+export default defineConfig({
   title: "知识库", // 网站标题
   description: "一个技术爱好者的学习与分享空间", // 网站描述
   markdown: {
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息'
+    },
     image: {
       lazyLoading: true
     },
@@ -90,4 +98,4 @@ export default {
       label: '导航'
     }
   }
-}
+})
