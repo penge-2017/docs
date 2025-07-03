@@ -36,16 +36,16 @@ npm add -D vitepress vue
 ```json
 {
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   },
   // 关键一步：让项目拥抱现代JS模块
   "type": "module"
 }
 ```
 
-创建 `docs` 目录和第一篇笔记 `docs/index.md`，运行 `npm run docs:dev`，一个最基础的网站就诞生了！
+创建 `docs` 目录和第一篇笔记 `docs/index.md`，运行 `npm run dev`，一个最基础的网站就诞生了！
 
 ## 第二站：核心配置
 

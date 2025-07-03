@@ -4,6 +4,9 @@ export default {
   title: "知识库", // 网站标题
   description: "一个技术爱好者的学习与分享空间", // 网站描述
   markdown: {
+    image: {
+      lazyLoading: true
+    },
     config: (md) => {
       md.use(katex)
     }
@@ -11,9 +14,14 @@ export default {
   themeConfig: {
     appearance: true,
     lastUpdated: true,
+    lastUpdatedText: '上次更新',
     docFooter: {
       next: false,
       prev: false
+    },
+    editLink: {
+      pattern: 'https://github.com/penge-2017/docs/:path',
+      text: 'Github编辑此页面'
     },
     search: {
       provider: 'local',
@@ -70,7 +78,8 @@ export default {
           { text: '设计', link: '/javascript/intro' },
           { text: '嵌入式', link: '/css/selectors.html' },
           { text: '安全', link: '/css/selectors.html' },
-          { text: '大数据', link: '/css/selectors.html' }
+          { text: '大数据', link: '/css/selectors.html' },
+          { text: '其它', link: '/css/selectors.html' }
         ]
       },
       { text: '登录', link: '/login' },
